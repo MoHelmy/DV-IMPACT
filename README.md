@@ -2,7 +2,7 @@
 
 
 DV-IMPACT is an online resource for the disease variants impact assessment on domain-peptide PPI networks. DV-IMPACT stores the PPI interaction networks mediated by wildtype and disease variants and visualizes the overlay of the two networks to understand the effects of mutations on the network and consequently their cellular and biological impact. Currently, the impact of ~250,000 disease (cancer) missense mutations stored in DV-IMPACT. Furthermore, DV-IMPACT provides the full sequences of the wildtype and disease variant proteins with a comprehensive search and download interface to easily build customized protein databases for genomic and proteomic analysis.
-![DV-IMPACT Screenshot](blob:https%3A//drive.google.com/8f45ecb8-67ca-4491-91de-0244750a76e4)
+![DV-IMPACT Screenshot](https://raw.githubusercontent.com/MoHelmy/DV-IMPACT/master/footer_logo.png)
 
 
 **Code Overview:**

@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a href="http://canvd.baderlab.org/" style="text-decoration: none;"><h2 style="color: #ffffff;"><strong><span style="color:#262626">DV</span>-IMPACT</strong></h2></a> 
+            <a href="http://dvimpact.baderlab.org/" style="text-decoration: none;"><h2 style="color: #ffffff;"><strong><span style="color:#262626">DV</span>-IMPACT</strong></h2></a> 
             <h5 style="text-align:left;color:#ffffff">The <span style="color:#262626"><strong>D</strong></span>isease <span style="color:#262626"><strong>V</strong></span>ariants <span style="text-decoration: underline;font-weight: bold;">Im</span>pact on Domain-based <span style="text-decoration: underline;font-weight: bold;">P</span>rotein Inter<span style="text-decoration: underline;font-weight: bold;">act</span>ions</h5>
         </div>
           

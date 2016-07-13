@@ -1,0 +1,507 @@
+#browse-tabs{
+	margin-top:15px;
+}
+
+h1 a{
+	text-decoration: none;
+	color:rgb(34, 34, 34);;
+}
+h1 a:hover{
+	text-decoration: none;
+	color:rgba(33, 33, 33, 0.8);
+}
+
+#cy {
+  height: 80%;
+  width: 100%;
+}
+
+.nav-pills li a{
+padding:10px !important;
+padding-right:10px !important;
+padding-left:10px !important;
+margin-right:5px;
+font-size:1em !important;
+}
+
+#downloads_panel{
+	display:none;
+}
+
+.download-list{
+	font-size:1.2em !important;
+}
+
+.show-item:hover{
+	cursor:pointer;
+}
+.stats-title{
+	font-size:1.1em;
+}
+.stats-body p{
+	font-size:1.0em !important;
+	margin-bottom:2px;
+	padding-bottom:2px;
+}
+
+#protein-table{
+	display:none;
+}
+
+#pwm-table{
+	display:none;
+}
+
+#tissue-table{
+}
+
+#browse-tabs li a:hover{
+	cursor:pointer;
+}
+
+li .active{
+	color:white !important;
+}
+
+.muts-table{
+	font-size:12px;
+	margin-bottom:0px;
+}
+
+.muts-table td{
+	padding:0 !important;
+	margin:0 !important;
+	padding-top:3px !important;
+	padding-bottom: 3px !important;
+	padding-left:15px !important;
+	padding-right:10px !important;
+}
+
+.qtip-content{
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+}
+
+.qtip-light{
+	max-width: 300 !important;
+}
+
+.qtip-content h6{
+	margin-left:10px;
+}
+
+#tissues_filter_table{
+	text-transform:capitalize;
+}
+
+.hidden_tr{
+	display: none;
+}
+
+#tissue-load-less{
+	display:none;
+}
+
+#protein-page a:hover{
+	cursor:pointer !important;
+}
+
+#pwm-page a:hover{
+	cursor:pointer !important;
+}
+
+#tissue-page a:hover{
+	cursor:pointer !important;
+}
+
+#protein-choice-list a:hover{
+	cursor:pointer !important;
+};
+
+#myModalLabel{
+	padding-right:25px;
+}
+
+.modal-body{
+	padding: 0;
+}
+
+#protein-choice-list td{
+	 padding-top:15px;padding-bottom:15px;
+}
+
+
+/* SQUARED FOUR */
+.squaredFour {
+	width: 20px;
+	margin: 20px auto;
+	position: relative;
+}
+
+.squaredFour label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.squaredFour label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredFour label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.5;
+}
+
+.squaredFour input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.highlighted_mut td{
+	background:#fff157 !important;
+}
+
+.highlighted_mut{
+	background:#fff157;
+}
+
+.highlighted_mut_l td{
+	background:rgba(215, 25, 28, 0.45) !important;
+}
+
+.highlighted_mut_l{
+	background:rgba(215, 25, 28, 0.45);
+}
+
+.highlighted_mut_g td{
+	background:rgba(44, 121, 181, 0.42) !important;
+}
+
+.highlighted_mut_g{
+	background:rgba(44, 121, 181, 0.42);
+}
+
+.selectable{
+	color:#345dbc;
+	text-decoration: underline;
+}
+
+.wt{
+	color:#2C7BB6;
+	font-weight: bold;
+}
+
+.mt{
+	color:#b30000;
+	font-weight: bold;
+
+}
+
+.navbar-inverse{
+	background-color: #e7e7e7;
+}
+.navbar-brand{
+	background-color:#f04124;
+}
+
+.navbar-brand:hover{
+	background-color:#f04124 !important;
+	cursor: default;
+}
+
+.navbar-nav .active a:hover{
+	cursor:default;
+}
+
+.navbar-nav .active a{
+	background-color:#e7e7e7 !important;
+	color:rgb(34, 34, 34) !important;
+}
+
+.download-dropdown{
+	background-color:#f04124;
+}
+
+.download-dropdown:hover{
+	background-color: #dc2c0f !important;
+}
+.filter-dropdown{
+	color:rgb(34, 34, 34) !important;
+}
+
+.filter-dropdown:hover{
+	background-color: #d3d3d3 !important;
+}
+
+
+.navbar-nav > .open > .filter-dropdown, .filter-dropdown:focus{
+	background:#d3d3d3 !important;
+}
+
+.dropdown-menu li a{
+	background:#e7e7e7 !important;
+	color:black !important;
+}
+
+.dropdown-menu li a:hover{
+	background:#d3d3d3 !important;
+	color:black !important;
+}
+
+.badge, .num-viewer{
+	color:black !important;
+}
+
+.badge{
+	border-radius:4px;
+}
+
+#top_btns{
+	margin-left:10px;margin-top:25px;
+}
+@media (max-width: 800px) {
+#title_fix{
+	display:block;
+	clear: both;
+}
+
+#title_h1{
+	margin-top:0px;
+	font-size:2.6em;
+}
+}
+
+.g{
+	color:#389f1e !important;
+	font-weight: bold;
+}
+
+.r{
+	color:#cb1515 !important;
+	font-weight: bold;
+}
+
+#variant-details-table td:hover{
+	cursor:default !important;
+}
+
+#prot_c_2, #prot_c_total{
+	font-weight:bold;
+}
+
+
+/* Spinners are from: https://github.com/tobiasahlin/SpinKit
+	Thanks! 											*/
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 14px;
+  height: 14px;
+  background-color: #f04124;
+  position:relative;
+  top:-85px;
+  margin-bottom:20px;
+  margin-right:5px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+.spinner2 {
+  width: 32px;
+  height: 28px;
+  position: relative;
+  margin-left:50px;
+}
+
+.spinner3 {
+  width: 32px;
+  height: 24px;
+  position: relative;
+  margin-left:10px;
+  position:relative;
+  top:-4px;
+}
+
+.cube3{
+	background-color: white !important;
+}
+.cube1, .cube2 {
+  background-color: #333;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(20px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(20px) translateY(20px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(20px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cubemove {
+  25% {
+    transform: translateX(20px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(20px) rotate(-90deg) scale(0.5);
+  } 50% {
+    transform: translateX(20px) translateY(20px) rotate(-179deg);
+    -webkit-transform: translateX(20px) translateY(20px) rotate(-179deg);
+  } 50.1% {
+    transform: translateX(20px) translateY(20px) rotate(-180deg);
+    -webkit-transform: translateX(20px) translateY(20px) rotate(-180deg);
+  } 75% {
+    transform: translateX(0px) translateY(20px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(20px) rotate(-270deg) scale(0.5);
+  } 100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+/* End Spinners */
+#show_more{
+	width:166px;
+}
+
+#show_all{
+	display:none;
+	width:166px;
+
+}
+#singlebutton{
+	width:110px;
+}
+
+.label_d3{
+	color:black;
+}
+
+.wt-pt{
+	background:#fdb863;
+}
+.mu-pt{
+	background:#ffffbf;
+}
+.noch-pt{
+	background:#e9a3c9;;
+}
+.gn-pt{
+	background:#2c7bb6;
+}
+.ls-pt{
+	background:#d7191c;
+}
+
+.domain
+{
+	background:#E7E7E7 !important;
+}
+
+#main_network_column{
+	padding:0;
+}
+
+.tissue-item{
+	margin-left:3px;
+}
+
+.tissue_active{
+	background: #32bd53;
+}
+
+.bo-pt{
+	background: #E9A3C9;
+}
+
+.noch-pt{
+	background: #efe67b;
+}
+
+.wt-pt{
+	background: #97f08a;
+}
+
+.source-item{
+	cursor:default !important;
+}

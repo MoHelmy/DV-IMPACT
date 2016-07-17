@@ -90,7 +90,7 @@ include_once('../common.php');
 	  $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE T_Mutations.Source RLIKE :source AND T_Mutations.`gene name` RLIKE :name AND T_Mutations.mut_description RLIKE :type AND T_Mutations.tumour_site IN (" . $plist . ");";
   }
   else {
-	  $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID AND T_Mutations.tumour_site IN (" . $plist . ");";
+	  $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE T_Mutations.tumour_site IN (" . $plist . ");";
   }
   }
   else

@@ -168,12 +168,12 @@
 <tr>
      <td>Binding Start*</td> 
      <td>Number</td> 
-     <td>Peptide’s start position.**</td> 
+     <td>Peptide's start position.**</td> 
 </tr>
 <tr>
      <td>Binding End*</td> 
      <td>Number</td> 
-     <td>Peptide’s end position.</td> 
+     <td>Peptide's end position.</td> 
 </tr>
 <tr>
      <td>[O] Supporting Information</td> 

@@ -11,7 +11,7 @@ $settings = array(
 					'db_host' 		=> 'localhost',
 					'db_name' 		=> 'canvd',
 					'db_user' 		=> 'root',
-					'db_password' 	=> '8582liap@cs2',
+					'db_password' 	=> '[INSERT MYSQL PASSWORD HERE]',
 );
 
 require($root_path . 'PDOext.class.php');

@@ -177,7 +177,7 @@
 
       $("#download-current").on("click", function(){
         $('#download_modal').modal('show');
-        window.location.href = './download_all.php?tissue=' + tissues_selected + '&source=' + '<?php echo json_encode($_GET["source"]);?>' + '&type=' + '<?php echo json_encode($_GET["mut_type"]);?>' + '&end=' + $('#prot_current').text() <?php if(isset($_GET['prot'])){ ?> + '&prot=' + "<?php echo $_GET['prot'];?>"<?php } ?>;
+        window.location.href = './download_all.php?tissue=' + tissues_selected + '&variant_search=' + '<?php echo json_encode($_GET["variant_search"]);?>' + '&source=' + '<?php echo json_encode($_GET["source"]);?>' + '&type=' + '<?php echo json_encode($_GET["mut_type"]);?>' + '&end=' + $('#prot_current').text() <?php if(isset($_GET['prot'])){ ?> + '&prot=' + "<?php echo $_GET['prot'];?>"<?php } ?>;
       });
 
     });

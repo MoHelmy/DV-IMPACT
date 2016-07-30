@@ -8,12 +8,12 @@ include_once('../common.php');
 //Lets set all of the values to their proper values OR wildcards
 
 //Which tissues are specified?
-	$start = 0;
+  $start = 0;
  if(!isset($_GET['current_count'])){
- 	$start = 0;
+  $start = 0;
  }
  else {
- 	$start = $_GET['current_count'];
+  $start = $_GET['current_count'];
  }
 
   //For use by the downlad.php file
@@ -34,7 +34,7 @@ include_once('../common.php');
 
 
   if (!isset($_GET['prot']) || $_GET['prot'] == ''){
-    $protein_name = "%";
+    $protein_name = ".*";
     $_GET['prot'] = '';
   }
   else{
@@ -46,13 +46,13 @@ include_once('../common.php');
 
 
   if (isset($_GET['source']) && $_GET['source'] != ''){
-  	$source = str_replace('["', '', $_GET['source']);
-  	$source = str_replace('"]', '', $source);
+    $source = str_replace('["', '', $_GET['source']);
+    $source = str_replace('"]', '', $source);
     $source = str_replace('","', '|', $source);
   }
   else{
     if (isset($_GET['variant_search'])){
-      $source = "";
+      $source = ".*";
     }
     else {
     $source = ".*";
@@ -61,13 +61,13 @@ include_once('../common.php');
   }
 
   if (isset($_GET['mut_type']) && $_GET['mut_type'] != ''){
-  	$type = str_replace('["', '', $_GET['mut_type']);
-  	$type = str_replace('"]', '', $type);
+    $type = str_replace('["', '', $_GET['mut_type']);
+    $type = str_replace('"]', '', $type);
     $type = str_replace('","', '|', $type);
-  }
+  }	
   else{
     if (isset($_GET['variant_search'])){
-      $type = "";
+      $type = ".*";
     }
     else{
       $type = ".*";
@@ -86,28 +86,47 @@ include_once('../common.php');
   $tissue_array = explode(',', $tissues);
 
   $plist = implode("','", $tissue_array);
-  $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE T_Mutations.Source RLIKE :source AND T_Mutations.`gene name` RLIKE :name AND T_Mutations.mut_description RLIKE :type AND T_Mutations.tumour_site IN (" . $plist . ") LIMIT 10000;";
+  if (isset($_GET['variant_search']) && $_GET['variant_search'] == '"true"'){
+    $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE T_Mutations.Source RLIKE :source AND T_Mutations.`gene name` RLIKE :name AND T_Mutations.mut_description RLIKE :type AND T_Mutations.tumour_site IN (" . $plist . ");";
+	var_dump($source);
+	var_dump($protein_name);
+	var_dump($type);
+      $query_params = array(":source" => $source, ":name" => $protein_name, ":type" => $type);
+      $stmt = $dbh->prepare($query);
+      $stmt->execute($query_params);
+
+  }
+  else {
+    $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE T_Mutations.tumour_site IN (" . $plist . ");";
+
+    $query_params = array();
+    $stmt = $dbh->prepare($query);
+    $stmt->execute($query_params);
+
+  }
   }
   else
   {
-  $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE  T_Mutations.Source RLIKE :source AND T_Mutations.`gene name` RLIKE :name AND T_Mutations.mut_description RLIKE :type LIMIT 10000;";
-  }
+  if (isset($_GET['variant_search'])){
+    $query = "SELECT GeneName,Sequence FROM T_Ensembl LEFT JOIN T_Mutations on T_Ensembl.EnsPID=T_Mutations.EnsPID WHERE  T_Mutations.Source RLIKE :source AND T_Mutations.`gene name` RLIKE :name AND T_Mutations.mut_description RLIKE :type;";
 
+      $query_params = array(":source" => $source, ":name" => $protein_name, ":type" => $type);
+      $stmt = $dbh->prepare($query);
+      $stmt->execute($query_params);
+
+  }
+  }
 
 
 /*******************RUN QUERY **********************************
 *****************************************************************/
 
-
-$query_params = array(":source" => $source, ":name" => $protein_name, ":type" => $type);
-$stmt = $dbh->prepare($query);
-$stmt->execute($query_params);
 $variant_proteins = array();
 $newfile = "";
 while ($row = $stmt->fetch())
 {
-	$newfile = $newfile . '>' . $row['GeneName'] . "\n";
-	$newfile = $newfile . $row['Sequence'] . "\n";
+  $newfile = $newfile . '>' . $row['GeneName'] . "\n";
+  $newfile = $newfile . $row['Sequence'] . "\n";
 }
 
 
@@ -123,3 +142,4 @@ header("Connection: close");
 echo $newfile;
 
 ?>
+
